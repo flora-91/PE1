@@ -1,0 +1,67 @@
+*{font-family: 'Montserrat', sans-serif; 
+    font-weight: 400; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    }
+
+/* Estilos globales */
+body {
+    margin: 50px;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    height: 100vh; /* Establece la altura al 100% del viewport */
+}
+
+/* Estilos para la caja */
+.caja {
+    display: flex;
+    flex-direction: column; /* Los contenedores se apilan verticalmente */
+    padding: 20px; /* Padding para todos los lados de la caja */
+    background-color: #f0f0f0; /* Color de fondo de la caja */
+    border-radius: 10px; /* Borde redondeado para la caja */
+}
+
+/* Estilos para los contenedores */
+.contenedor {
+    padding: 10oxx; /* Padding para todos los lados de los contenedores */
+    margin: 5px; /* Margen entre los contenedores */
+    background-color: #fff; /* Color de fondo de los contenedores */
+    border: 1px solid #ccc; /* Borde para los contenedores */
+    border-radius: 5px; /* Borde redondeado para los contenedores */
+}
+
+.card1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centra verticalmente los elementos dentro de la tarjeta */
+    padding: 40px; /* Padding para la tarjeta */
+    background-color: #fff; /* Color de fondo de la tarjeta */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra para la tarjeta */
+    border-radius: 5px; /* Borde redondeado para la tarjeta */
+}
+
+.card2{
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 40px; /* Padding para la tarjeta */
+    background-color: #fff; /* Color de fondo de la tarjeta */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra para la tarjeta */
+    border-radius: 5px; /* Borde redondeado para la tarjeta */
+
+
+}
+.card2 h2{
+    margin-bottom: 15px;
+    margin-left: 0px;
+
+}
+#formularioContainer{
+     text-align: center;    
+     gap: 0.5rem;
+    width: 500px;
+}
