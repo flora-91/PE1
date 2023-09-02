@@ -1,18 +1,22 @@
-*{font-family: 'Montserrat', sans-serif; 
-    font-weight: 400; 
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
     }
 
+html{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400; 
+}
 /* Estilos globales */
 body {
+    min-width: 100vw;
     margin: 50px;
     padding: 0;
     display: flex;
     justify-content: center; /* Centra horizontalmente el contenido */
     align-items: center; /* Centra verticalmente el contenido */
-    height: 100vh; /* Establece la altura al 100% del viewport */
+    min-height: 100vh; /* Establece la altura al 100% del viewport */
 }
 
 /* Estilos para la caja */
@@ -26,7 +30,7 @@ body {
 
 /* Estilos para los contenedores */
 .contenedor {
-    padding: 10oxx; /* Padding para todos los lados de los contenedores */
+    padding: 10px; /* Padding para todos los lados de los contenedores */
     margin: 5px; /* Margen entre los contenedores */
     background-color: #fff; /* Color de fondo de los contenedores */
     border: 1px solid #ccc; /* Borde para los contenedores */
@@ -34,6 +38,7 @@ body {
 }
 
 .card1{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center; /* Centra verticalmente los elementos dentro de la tarjeta */
@@ -44,7 +49,7 @@ body {
 }
 
 .card2{
-
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -64,4 +69,24 @@ body {
      text-align: center;    
      gap: 0.5rem;
     width: 500px;
+}
+input, select{
+    font-family: inherit;
+}
+
+.horizontal-flex{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: .25rem;
+    row-gap: .5rem;
+    
+}
+.horizontal-flex div{
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ justify-content: flex-start;
+ gap:.25rem;
 }

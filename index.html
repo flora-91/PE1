@@ -9,8 +9,7 @@
 </head>
 
 <body>
-
-    <div class="caja">
+    <div id="form" class="caja">
 
         <div class="contenedor card1" >
         <h1>Sarasapp</h1>
@@ -20,11 +19,71 @@
 
         <div id="formularioContainer"class="contenedor card2">
         <h2>Formulario de Registro</h2>
-       
+        <label for="nombre">Nombre y apellido:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad" required>
+
+    <label for="objetivos">Objetivos:</label>
+    <select id="objetivos" name="objetivos" required>
+        <option value="perder_peso">Perder Peso</option>
+        <option value="ganar_masa_muscular">Ganar Masa Muscular</option>
+        <option value="ambos">Ambos (Perder Peso y Ganar Masa Muscular)</option>
+        <option value="adelgazar">Adelgazar</option>
+    </select>
+
+    <label for="gustos">Gustos en Actividades Físicas:</label>
+    <select id="gustos" multiple size="3" name="gustos" multiple required>
+        <option value="danza">Danza</option>
+        <option value="entrenamiento_peso">Entrenamiento con Pesas</option>
+        <option value="spinning">Spinning</option>
+        <option value="running">Running</option>
+        <option value="bodypump">Bodypump</option>
+        <option value="boxeo">Boxeo</option>
+        <option value="funcional">Funcional</option>
+        <option value="localizada">Localizada</option>
+        <option value="yoga">Yoga</option>
+        <option value="pilates">Pilates</option>
+    </select>
+
+    <label for="estado_fisico">Estado Físico:</label>
+    <div class="horizontal-flex">
+        <div>
+            <label for="bueno">Bueno</label>
+            <input type="radio" id="bueno" name="estado_fisico" value="bueno" required>
+        </div>
+        <div>
+            <label for="regular">Regular</label>
+            <input type="radio" id="regular" name="estado_fisico" value="regular">
+        </div>
+        <div>
+            <label for="malo">Malo</label>
+            <input type="radio" id="malo" name="estado_fisico" value="malo">
         </div>
     </div>
 
-    
+
+
+    <label for="condiciones_salud">Condiciones de Salud Previas:</label>
+    <textarea id="condiciones_salud" name="condiciones_salud" rows="4" cols="50"></textarea>
+
+    <label for="salud_limitante">Que tan limitante para entrenar es?</label>
+    <select id="salud_limitante[]"  name="salud_limitante">
+    <option value="no_limita">No limita</option>
+    <option value="moderado">Moderado</option>
+    <option value="comprometido">Comprometido</option>
+    <option value="no_aplica">No aplica</option>
+    </select>
+   
+
+    <button onclick="generar()" >Generar</button>
+
+        </div>
+        <div id="recomendacion">
+        </div>
+    </div>
+
     <script src="/js/miarchivo.js"></script>
 </body>
 </html>
