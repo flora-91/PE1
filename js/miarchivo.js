@@ -1,15 +1,15 @@
-// Obtener referencia al formulario
+// referencia al formulario
 const formulario = document.getElementById("form");
 let divRecomendacion = document.getElementById("recomendacion");
 formulario.id = "registroForm";
 
-// Agregar el formulario al contenedor
+// agrego el formulario al contenedor
 const formularioContainer = document.getElementById("formularioContainer");
 
 function generar() {
   event.preventDefault();
 
-  // Obtener los valores del formulario y realizar el procesamiento
+  // obtengo los valores del formulario y realizo el procesamiento
   const nombre = document.getElementById("nombre").value;
   const edad = parseInt(document.getElementById("edad").value, 10);
   const objetivos = document.getElementById("objetivos").value;
@@ -24,10 +24,10 @@ function generar() {
   console.log(estadoFisico);
   const condicionesSalud = document.getElementById("condiciones_salud").value;
 
-  // Realizar el procesamiento principal aquí, como validación de datos
+  //  procesamiento principal 
   let recomendacion = "Recomendación de rutina:\n";
 
-  // Lógica para generar recomendaciones basadas en los objetivos
+ 
   switch (objetivos) {
     case "perder_peso":
       recomendacion +=
@@ -69,7 +69,7 @@ function generar() {
     recomendacion+= gusto+' x50mil repeticiones';
   });
 
-  // Ejemplo: Validar la edad (debe ser un número mayor que cero)
+  
   if (isNaN(edad) || edad <= 0) {
     alert("Por favor, ingrese una edad válida.");
     return;

@@ -8,44 +8,44 @@ html{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 400; 
 }
-/* Estilos globales */
+
 body {
     min-width: 100vw;
     margin: 50px;
     padding: 0;
     display: flex;
-    justify-content: center; /* Centra horizontalmente el contenido */
-    align-items: center; /* Centra verticalmente el contenido */
-    min-height: 100vh; /* Establece la altura al 100% del viewport */
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    background-color: #6b5264;
 }
 
-/* Estilos para la caja */
 .caja {
     display: flex;
-    flex-direction: column; /* Los contenedores se apilan verticalmente */
-    padding: 20px; /* Padding para todos los lados de la caja */
-    background-color: #f0f0f0; /* Color de fondo de la caja */
-    border-radius: 10px; /* Borde redondeado para la caja */
+    flex-direction: column; 
+    padding: 20px; 
+    background-color: #f0f0f0; 
+    border-radius: 10px; 
 }
 
-/* Estilos para los contenedores */
+
 .contenedor {
-    padding: 10px; /* Padding para todos los lados de los contenedores */
-    margin: 5px; /* Margen entre los contenedores */
-    background-color: #fff; /* Color de fondo de los contenedores */
-    border: 1px solid #ccc; /* Borde para los contenedores */
-    border-radius: 5px; /* Borde redondeado para los contenedores */
+    padding: 10px; 
+    margin: 5px; 
+    background-color: #fff; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
 }
 
 .card1{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Centra verticalmente los elementos dentro de la tarjeta */
-    padding: 40px; /* Padding para la tarjeta */
-    background-color: #fff; /* Color de fondo de la tarjeta */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra para la tarjeta */
-    border-radius: 5px; /* Borde redondeado para la tarjeta */
+    align-items: center; 
+    padding: 40px; 
+    background-color: #fff; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 5px; 
 }
 
 .card2{
@@ -53,10 +53,10 @@ body {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    padding: 40px; /* Padding para la tarjeta */
-    background-color: #fff; /* Color de fondo de la tarjeta */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra para la tarjeta */
-    border-radius: 5px; /* Borde redondeado para la tarjeta */
+    padding: 40px; 
+    background-color: #fff; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 5px; 
 
 
 }
@@ -72,6 +72,10 @@ body {
 }
 input, select{
     font-family: inherit;
+    border-radius: 5px;
+}
+textarea{
+    border-radius: 5px;
 }
 
 .horizontal-flex{
@@ -90,3 +94,19 @@ input, select{
  justify-content: flex-start;
  gap:.25rem;
 }
+.boton{
+    font-weight: bolder;
+    background-color:#6b5264;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  padding: 10px 20px; 
+  font-size: 14px;   
+  width: min-content;
+  display: block;    
+  margin: 0 auto;  
+  border-radius: 10px;
+}
+.boton:hover {
+    background-color: #FFDA08;
+    font-weight: bolder;
+  }
