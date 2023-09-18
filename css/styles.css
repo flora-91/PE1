@@ -110,3 +110,16 @@ textarea{
     background-color: #FFDA08;
     font-weight: bolder;
   }
+
+  #recomendacion{
+    background-color: #FFDA08ed;
+    display: flex;
+    flex-direction: column; 
+    max-height: 100%; /
+    overflow-y: auto; 
+    max-width: 400px;
+    justify-content: center;
+    margin-left: 50px;
+    border-radius: 10px;
+    
+  }
