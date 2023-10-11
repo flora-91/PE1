@@ -27,97 +27,120 @@ function generar() {
   //  procesamiento principal 
   let recomendacion = "Recomendación de rutina:\n";
 
- 
 
- 
 
-  const objetivosRespuestas={
-    perder_peso: "Para perder peso, recomendamos una rutina de ejercicios aeróbicos como correr o nadar, acompañada de una dieta equilibrada.",
+
+
+  const objetivosRespuestas = {
+    perder_peso: "Una rutina de ejercicios efectiva para quemar grasa generalmente incluye una combinación de entrenamiento cardiovascular y entrenamiento de fuerza. Esto ayudará a aumentar tu metabolismo y a quemar calorías, lo que a su vez te ayudará a perder grasa. 3 veces por semana cardio + 2 veces por semana de musculación",
+
+    ganar_masa_muscular: "Para ganar masa muscular, es importante realizar un programa de entrenamiento de fuerza efectivo y asegurarte de obtener suficientes nutrientes y descanso adecuado. Aquí tienes una rutina básica de entrenamiento de fuerza para ayudarte a aumentar la masa muscular. 5 veces por semana fuerza + 20 min de cardio después de cada entrenamiento. (2 dias de descanso).",
+
+    ambos: "Quemar grasa y aumentar masa muscular al mismo tiempo puede ser un desafío, ya que a menudo requiere un enfoque más cuidadoso en la dieta y un equilibrio adecuado entre el entrenamiento cardiovascular y el entrenamiento de fuerza. Aquí tienes una rutina que combina ambos objetivos:4 veces por semana fuerza + 2 veces por semana cardio. (1 dia de descanso).",
+
+    adelgazar: "Una rutina de ejercicios efectiva para quemar grasa generalmente incluye una combinación de entrenamiento cardiovascular y entrenamiento de fuerza. Esto ayudará a aumentar tu metabolismo y a quemar calorías, lo que a su vez te ayudará a perder grasa. 3 veces por semana cardio + 2 veces por semana de musculación.",
+
+  }
+
+  const gustosRespuestas = [
     
-    ganar_masa_muscular:"Para ganar masa muscular, recomendamos un programa de entrenamiento de fuerza con levantamiento de pesas y una ingesta adecuada de proteínas.",
+    { nombre: "danza" , descripcion: 'Cardio de tu rutina = Zumba / Salsa / Bachata/ Dancehall / Reggaeton'},
+
+    { nombre: "entrenamiento_peso" , descripcion: 'Levantamiento Olímpico / Powerlifting / Bodypump / Funcional'},
+
+    { nombre: "spinning" , descripcion: 'Cardio de tu rutina = clases de spinning o salir en bicileta, (la cantidad de veces especificada antes)'},
+
+    { nombre: "running" , descripcion: 'Spinning, HIIT, Cinta, Clases de Circuito, Elíptico'},
+
+    { nombre: "bodypump" , descripcion: 'Cardio de tu rutina = Bodypump / CXWORK / Pump FX / Powerlifting / Funcional / Crossfit'},
+
+    { nombre: "boxeo" , descripcion: 'Aerobox / Aerocombat / Kickboxing / Boxeo / HIIT '},
     
-    ambos:"Si deseas perder peso y ganar masa muscular al mismo tiempo, te recomendamos un enfoque que combine ejercicios aeróbicos y entrenamiento de fuerza, junto con una dieta controlada.",
+    { nombre: "funcional" , descripcion: 'HIIT, Crossfit, Bootcamp, Circuito, Entrenamiento deportivo, TRX, Yoga funcional'},
 
-    adelgazar:"Para adelgazar, te recomendamos una combinación de ejercicios cardiovasculares y una dieta baja en calorías.",
-    
+    { nombre: "localizada" , descripcion: 'Pilates / Localizada / Local max / GAP'},
+
+    { nombre: "yoga" , descripcion: 'Yoga / Tai-chi / Pilates / Yoga- Pilates fusión'},
+
+    { nombre: "pilates" , descripcion: 'Pilates reformer/ Pilates mat / Pilates funcional / Yoga- Pilates fusión'},
+  ]
+
+  const estadoFisicoRespuestas = {
+    bueno: "Metele pata",
+
+    regular: "Cagaste",
+
+    malo: "En el horno",
   }
 
-  const estadoFisicoRespuestas={
-    bueno:"Metele pata",
-
-    regular:"Cagaste",
-
-    malo:"En el horno",
-  }
-
-  recomendacion += objetivosRespuestas[objetivos] + '<br>'+ estadoFisicoRespuestas[estadoFisico];
-  
-  
- 
+  recomendacion += objetivosRespuestas[objetivos] + '<br>' + estadoFisicoRespuestas[estadoFisico];
 
 
-// rutinas
 
-class RutinaControlador {
 
-  constructor(nombre, orientado) {
 
-    this.nombre = nombre;
+  // rutinas
 
-    this.orientado = orientado;
+  class RutinaControlador {
 
-    this.ejercicios = [];
+    constructor(nombre, orientado) {
 
-  }
+      this.nombre = nombre;
 
-  agregarEjercicio(nombre, duracionEnMin, repeticiones) {
+      this.orientado = orientado;
 
-    this.ejercicios.push({
+      this.ejercicios = [];
 
-      nombre: nombre,
+    }
 
-      duracionEnMin: duracionEnMin,
+    agregarEjercicio(nombre, duracionEnMin, repeticiones) {
 
-      repeticiones: repeticiones,
+      this.ejercicios.push({
 
-    });
+        nombre: nombre,
+
+        duracionEnMin: duracionEnMin,
+
+        repeticiones: repeticiones,
+
+      });
+
+    }
 
   }
 
-}
+  const rutinaBoxeo = new RutinaControlador('Rutina1', 'bueno');
 
-const rutinaBoxeo = new RutinaControlador('Rutina1', 'boxeo');
+  const rutinaSpinning = new RutinaControlador('Rutina de spinning', 'regular');
 
-const rutinaSpinning = new RutinaControlador('Rutina de spinning', 'spinning');
-
-const rutinaFuncional = new RutinaControlador ('Rutina de Funcional', 'funcional');
-
- 
-
-rutinaBoxeo.agregarEjercicio('flexiones', 2, 10);
-rutinaBoxeo.agregarEjercicio('burpees', 10, 50);
-rutinaSpinning.agregarEjercicio('cardio', 23, 6); 
-rutinaSpinning.agregarEjercicio('cardio', 23, 6); 
+  const rutinaFuncional = new RutinaControlador('Rutina de Funcional', 'malo');
 
 
-console.log(rutinaBoxeo);
 
-const rutinas = [rutinaBoxeo, rutinaSpinning, rutinaFuncional];
+  rutinaBoxeo.agregarEjercicio('flexiones', 2, 10);
+  rutinaBoxeo.agregarEjercicio('burpees', 10, 50);
+  rutinaSpinning.agregarEjercicio('cardio', 23, 6);
+  rutinaSpinning.agregarEjercicio('cardio', 23, 6);
 
 
-const rutinaSeleccionada = rutinas.find(rutina => rutina.orientado==gustos
-)
+  console.log(rutinaBoxeo);
 
-let rutinasHTML = ''
+  const rutinas = [rutinaBoxeo, rutinaSpinning, rutinaFuncional];
 
-    const renderizarEjercicios = (ejercicios) =>{
 
-        let resultHTML = ''
+  const rutinaSeleccionada = rutinas.find(rutina => rutina.orientado == estadoFisico
+  )
 
-        ejercicios.forEach(ejercicio =>{
-          console.log(ejercicio)
+  let rutinasHTML = ''
 
-            resultHTML += `
+  const renderizarEjercicios = (ejercicios) => {
+
+    let resultHTML = ''
+
+    ejercicios.forEach(ejercicio => {
+      
+
+      resultHTML += `
 
                 <div>
 
@@ -131,13 +154,41 @@ let rutinasHTML = ''
 
             `
 
-        })
+    })
 
-        return resultHTML
+    return resultHTML
 
-    }
+  }
 
-    rutinasHTML = `
+  const renderizarGustos = (gustos) => {
+
+    let resultHTML = ''
+
+    gustos.forEach(gusto => {
+     let res = gustosRespuestas.find(respuesta =>  respuesta.nombre === gusto)
+ console.log(res)
+      resultHTML += `
+
+                <div>
+
+                    
+
+                    <span>Recomendación:  ${res.descripcion}</span>
+
+                    <hr>
+
+                </div>
+
+            `
+
+    })
+
+    return resultHTML
+
+  }
+
+
+  rutinasHTML = `
 
        <h2>${rutinaSeleccionada.nombre}</h2>
 
@@ -149,14 +200,19 @@ let rutinasHTML = ''
             ${renderizarEjercicios(rutinaSeleccionada.ejercicios)}
 
         <div>
+        <div>
 
+        ${renderizarGustos(gustos)}
+
+    </div>
     `
+    
 
-    recomendacion += rutinasHTML
+  recomendacion += rutinasHTML
 
-  
 
-  
+
+
   if (isNaN(edad) || edad <= 0) {
     alert("Por favor, ingrese una edad válida.");
     return;
