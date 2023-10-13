@@ -31,7 +31,7 @@ function generar() {
 
 
   //  procesamiento principal 
-  let recomendacion = "     <button class='boton-cerrar' onclick='cerrarModal()'>x</button>Recomendación de rutina:\n";
+  let recomendacion = "     <button class='boton-cerrar' onclick='cerrarModal()'>x</button><h1>Recomendación de rutina:</h1>\n";
 
 
 
@@ -50,33 +50,33 @@ function generar() {
 
   const gustosRespuestas = [
     
-    { nombre: "danza" , descripcion: 'Cardio de tu rutina = Zumba / Salsa / Bachata/ Dancehall / Reggaeton'},
+    { nombre: "danza" , descripcion: 'Sugerencias de clases: Zumba / Salsa / Bachata/ Dancehall / Reggaeton'},
 
-    { nombre: "entrenamiento_peso" , descripcion: 'Levantamiento Olímpico / Powerlifting / Bodypump / Funcional'},
+    { nombre: "entrenamiento_peso" , descripcion: 'Sugerencias de clases: Levantamiento Olímpico / Powerlifting / Bodypump / Funcional'},
 
-    { nombre: "spinning" , descripcion: 'Cardio de tu rutina = clases de spinning o salir en bicileta, (la cantidad de veces especificada antes)'},
+    { nombre: "spinning" , descripcion: 'Sugerencias de clases: clases de spinning o salir en bicicleta, (la cantidad de veces especificada antes)'},
 
-    { nombre: "running" , descripcion: 'Spinning, HIIT, Cinta, Clases de Circuito, Elíptico'},
+    { nombre: "running" , descripcion: 'Sugerencias de clases: Spinning, HIIT, Cinta, Clases de Circuito, Elíptico'},
 
-    { nombre: "bodypump" , descripcion: 'Cardio de tu rutina = Bodypump / CXWORK / Pump FX / Powerlifting / Funcional / Crossfit'},
+    { nombre: "bodypump" , descripcion: 'Sugerencias de clases: Bodypump / CXWORK / Pump FX / Powerlifting / Funcional / Crossfit'},
 
-    { nombre: "boxeo" , descripcion: 'Aerobox / Aerocombat / Kickboxing / Boxeo / HIIT '},
+    { nombre: "boxeo" , descripcion: 'Sugerencias de clases: Aerobox / Aerocombat / Kickboxing / Boxeo / HIIT '},
     
-    { nombre: "funcional" , descripcion: 'HIIT, Crossfit, Bootcamp, Circuito, Entrenamiento deportivo, TRX, Yoga funcional'},
+    { nombre: "funcional" , descripcion: 'Sugerencias de clases: HIIT, Crossfit, Bootcamp, Circuito, Entrenamiento deportivo, TRX, Yoga funcional'},
 
-    { nombre: "localizada" , descripcion: 'Pilates / Localizada / Local max / GAP'},
+    { nombre: "localizada" , descripcion: 'Sugerencias de clases: Pilates / Localizada / Local max / GAP'},
 
-    { nombre: "yoga" , descripcion: 'Yoga / Tai-chi / Pilates / Yoga- Pilates fusión'},
+    { nombre: "yoga" , descripcion: 'Sugerencias de clases: Yoga / Tai-chi / Pilates / Yoga- Pilates fusión'},
 
-    { nombre: "pilates" , descripcion: 'Pilates reformer/ Pilates mat / Pilates funcional / Yoga- Pilates fusión'},
+    { nombre: "pilates" , descripcion: 'Sugerencias de clases: Pilates reformer/ Pilates mat / Pilates funcional / Yoga- Pilates fusión'},
   ]
 
   const estadoFisicoRespuestas = {
-    bueno: "Metele pata",
+    bueno: "Seguí desafiando tus límites y descubrí hasta dónde podés llegar",
 
-    regular: "Cagaste",
+    regular: "Mantené la mirada en el horizonte y avanzá con determinación",
 
-    malo: "En el horno",
+    malo: "Cada pequeño paso te acerca más a tu mejor versión.",
   }
 
   recomendacion += objetivosRespuestas[objetivos] + '<br>' + estadoFisicoRespuestas[estadoFisico];
@@ -115,11 +115,11 @@ function generar() {
 
   }
 
-  const rutinaBoxeo = new RutinaControlador('1', 'bueno');
+  const rutinaBoxeo = new RutinaControlador('Nivel de dificultad : 3', 'bueno');
 
-  const rutinaSpinning = new RutinaControlador('2', 'regular');
+  const rutinaSpinning = new RutinaControlador('Nivel de dificultad : 6', 'regular');
 
-  const rutinaFuncional = new RutinaControlador('3', 'malo');
+  const rutinaFuncional = new RutinaControlador('Nivel de dificultad : 8', 'malo');
 
 
 
@@ -179,7 +179,7 @@ console.log(estadoFisico)
 
                     
 
-                    <span>Recomendación:  ${res.descripcion}</span>
+                    <span><h2>Opciones de cardio:</h2>  ${res.descripcion}</span>
 
                     <hr>
 
@@ -199,7 +199,7 @@ console.log(estadoFisico)
        <h2>${rutinaSeleccionada.nombre}</h2>
 
 
-        <span>Orientado a: ${rutinaSeleccionada.orientado}</span>
+        <span>Estado actual: ${rutinaSeleccionada.orientado}</span>
 
         <div>
 
