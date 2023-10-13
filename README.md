@@ -1,7 +1,9 @@
-# PE1
+Trabajo final
 
-Pre-entrega 1 de JavaScript - Coderhouse 
+Entrega del trabajo final de JavaScript - Coderhouse 
 
-Boceto de un formulario para entrenadores. 
+Formulario para armar tu rutina de entrenamiento
 
-La idea es que segun los datos ingresador el sistema te devuelva una rutina y un plan de alimentación especificos para esa persona. 
+Ingresá datos relacionados a tus preferencias y objetivos y el formulario te devuelve una rutina especifica.
+
+Para hacer el trabajo utilicé HTML, CSS y JavaScript
