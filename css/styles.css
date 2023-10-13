@@ -11,7 +11,6 @@ html{
 
 body {
     min-width: 100vw;
-    margin: 50px;
     padding: 0;
     display: flex;
     justify-content: center; 
@@ -26,6 +25,7 @@ body {
     padding: 20px; 
     background-color: #f0f0f0; 
     border-radius: 10px; 
+    width: 60%;
 }
 
 
@@ -36,13 +36,16 @@ body {
     border: 1px solid #ccc; 
     border-radius: 5px; 
 }
+.homero{
+    width: 80px;
+}
 
 .card1{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    padding: 40px; 
+    padding: 10px; 
     background-color: #fff; 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
     border-radius: 5px; 
@@ -68,7 +71,7 @@ body {
 #formularioContainer{
      text-align: center;    
      gap: 0.5rem;
-    width: 500px;
+    width: 100%;
 }
 input, select{
     font-family: inherit;
@@ -115,11 +118,47 @@ textarea{
     background-color: #FFDA08ed;
     display: flex;
     flex-direction: column; 
-    max-height: 100%; /
+    max-height: 100%; 
     overflow-y: auto; 
-    max-width: 400px;
+    max-width: 600px;
     justify-content: center;
     margin-left: 50px;
     border-radius: 10px;
     
   }
+  .recomendacion{
+    background-color: #FFDA08;
+  }
+
+  .modal-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.301);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .ocultar{
+    display: none;
+  }
+  .recomendacion-modal{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    padding: 20px;
+    border: solid 1px black;
+    gap: 10px;
+
+  }
+ .boton-cerrar{
+    width: 50px;
+    align-self: flex-end;
+    border-radius: 5px;
+    font-size: 24px;
+ }

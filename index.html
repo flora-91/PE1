@@ -13,12 +13,12 @@
 
         <div class="contenedor card1" >
         <h1>Sarasa</h1>
-        <img src="./css/homer.jpg" alt="homero_fit">
+        <img src="./css/homer.jpg" alt="homero_fit" class="homero">
         
         </div>
 
         <div id="formularioContainer"class="contenedor card2">
-        <h2>Datos del cliente</h2>
+        <h2>Ingresá tus datos</h2>
         <label for="nombre">Nombre y apellido:</label>
     <input type="text" id="nombre" name="nombre" required>
 
@@ -80,7 +80,12 @@
     <button class="boton" onclick="generar()" >Generar</button>
 
         </div>
-        <div id="recomendacion">
+
+        <div  class="modal-container ocultar" id="modal">
+        <div id="recomendacion" class="recomendacion-modal">
+       
+
+        </div>
         </div>
     </div>
 

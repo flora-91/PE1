@@ -1,3 +1,6 @@
+let modalContainer = document.getElementById("modal");
+
+
 // referencia al formulario
 const formulario = document.getElementById("form");
 let divRecomendacion = document.getElementById("recomendacion");
@@ -24,8 +27,11 @@ function generar() {
   console.log(estadoFisico);
   const condicionesSalud = document.getElementById("condiciones_salud").value;
 
+
+
+
   //  procesamiento principal 
-  let recomendacion = "Recomendación de rutina:\n";
+  let recomendacion = "     <button class='boton-cerrar' onclick='cerrarModal()'>x</button>Recomendación de rutina:\n";
 
 
 
@@ -109,11 +115,11 @@ function generar() {
 
   }
 
-  const rutinaBoxeo = new RutinaControlador('Rutina1', 'bueno');
+  const rutinaBoxeo = new RutinaControlador('1', 'bueno');
 
-  const rutinaSpinning = new RutinaControlador('Rutina de spinning', 'regular');
+  const rutinaSpinning = new RutinaControlador('2', 'regular');
 
-  const rutinaFuncional = new RutinaControlador('Rutina de Funcional', 'malo');
+  const rutinaFuncional = new RutinaControlador('3', 'malo');
 
 
 
@@ -126,7 +132,7 @@ function generar() {
   console.log(rutinaBoxeo);
 
   const rutinas = [rutinaBoxeo, rutinaSpinning, rutinaFuncional];
-
+console.log(estadoFisico)
 
   const rutinaSeleccionada = rutinas.find(rutina => rutina.orientado == estadoFisico
   )
@@ -169,7 +175,7 @@ function generar() {
  console.log(res)
       resultHTML += `
 
-                <div>
+                <div class="recomendacion">
 
                     
 
@@ -218,5 +224,14 @@ function generar() {
     return;
   }
   divRecomendacion.innerHTML = recomendacion;
-  formulario.append(divRecomendacion);
+  modalContainer.append(divRecomendacion);
+
+
+modalContainer.classList.remove("ocultar");
+
+}
+
+
+function cerrarModal(){
+  modalContainer.classList.add("ocultar");
 }
